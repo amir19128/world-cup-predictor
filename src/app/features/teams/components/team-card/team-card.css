@@ -1,0 +1,20 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.flag {
+  font-size: 40px;
+}
+
+.name {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.group {
+  color: gray;
+  margin-top: 4px;
+}

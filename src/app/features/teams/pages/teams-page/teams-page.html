@@ -1,0 +1,7 @@
+<h1>World Cup 2026 Teams</h1>
+
+<div class="teams-grid">
+  @for (team of teams(); track team.id) {
+    <app-team-card [team]="team" />
+  }
+</div>

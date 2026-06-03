@@ -1,0 +1,61 @@
+[
+  { "id": 1, "name": "Mexico", "code": "MEX", "group": "A", "flag": "🇲🇽" },
+  { "id": 2, "name": "South Africa", "code": "RSA", "group": "A", "flag": "🇿🇦" },
+  { "id": 3, "name": "South Korea", "code": "KOR", "group": "A", "flag": "🇰🇷" },
+  { "id": 4, "name": "Czechia", "code": "CZE", "group": "A", "flag": "🇨🇿" },
+
+  { "id": 5, "name": "Canada", "code": "CAN", "group": "B", "flag": "🇨🇦" },
+  { "id": 6, "name": "Bosnia and Herzegovina", "code": "BIH", "group": "B", "flag": "🇧🇦" },
+  { "id": 7, "name": "Qatar", "code": "QAT", "group": "B", "flag": "🇶🇦" },
+  { "id": 8, "name": "Switzerland", "code": "SUI", "group": "B", "flag": "🇨🇭" },
+
+  { "id": 9, "name": "Brazil", "code": "BRA", "group": "C", "flag": "🇧🇷" },
+  { "id": 10, "name": "Morocco", "code": "MAR", "group": "C", "flag": "🇲🇦" },
+  { "id": 11, "name": "Haiti", "code": "HAI", "group": "C", "flag": "🇭🇹" },
+  { "id": 12, "name": "Scotland", "code": "SCO", "group": "C", "flag": "🏴" },
+
+  { "id": 13, "name": "USA", "code": "USA", "group": "D", "flag": "🇺🇸" },
+  { "id": 14, "name": "Paraguay", "code": "PAR", "group": "D", "flag": "🇵🇾" },
+  { "id": 15, "name": "Australia", "code": "AUS", "group": "D", "flag": "🇦🇺" },
+  { "id": 16, "name": "Türkiye", "code": "TUR", "group": "D", "flag": "🇹🇷" },
+
+  { "id": 17, "name": "Germany", "code": "GER", "group": "E", "flag": "🇩🇪" },
+  { "id": 18, "name": "Curaçao", "code": "CUW", "group": "E", "flag": "🇨🇼" },
+  { "id": 19, "name": "Côte d'Ivoire", "code": "CIV", "group": "E", "flag": "🇨🇮" },
+  { "id": 20, "name": "Ecuador", "code": "ECU", "group": "E", "flag": "🇪🇨" },
+
+  { "id": 21, "name": "Netherlands", "code": "NED", "group": "F", "flag": "🇳🇱" },
+  { "id": 22, "name": "Japan", "code": "JPN", "group": "F", "flag": "🇯🇵" },
+  { "id": 23, "name": "Sweden", "code": "SWE", "group": "F", "flag": "🇸🇪" },
+  { "id": 24, "name": "Tunisia", "code": "TUN", "group": "F", "flag": "🇹🇳" },
+
+  { "id": 25, "name": "Belgium", "code": "BEL", "group": "G", "flag": "🇧🇪" },
+  { "id": 26, "name": "Egypt", "code": "EGY", "group": "G", "flag": "🇪🇬" },
+  { "id": 27, "name": "Iran", "code": "IRN", "group": "G", "flag": "🇮🇷" },
+  { "id": 28, "name": "New Zealand", "code": "NZL", "group": "G", "flag": "🇳🇿" },
+
+  { "id": 29, "name": "Spain", "code": "ESP", "group": "H", "flag": "🇪🇸" },
+  { "id": 30, "name": "Cabo Verde", "code": "CPV", "group": "H", "flag": "🇨🇻" },
+  { "id": 31, "name": "Saudi Arabia", "code": "KSA", "group": "H", "flag": "🇸🇦" },
+  { "id": 32, "name": "Uruguay", "code": "URU", "group": "H", "flag": "🇺🇾" },
+
+  { "id": 33, "name": "France", "code": "FRA", "group": "I", "flag": "🇫🇷" },
+  { "id": 34, "name": "Senegal", "code": "SEN", "group": "I", "flag": "🇸🇳" },
+  { "id": 35, "name": "Iraq", "code": "IRQ", "group": "I", "flag": "🇮🇶" },
+  { "id": 36, "name": "Norway", "code": "NOR", "group": "I", "flag": "🇳🇴" },
+
+  { "id": 37, "name": "Argentina", "code": "ARG", "group": "J", "flag": "🇦🇷" },
+  { "id": 38, "name": "Algeria", "code": "ALG", "group": "J", "flag": "🇩🇿" },
+  { "id": 39, "name": "Austria", "code": "AUT", "group": "J", "flag": "🇦🇹" },
+  { "id": 40, "name": "Jordan", "code": "JOR", "group": "J", "flag": "🇯🇴" },
+
+  { "id": 41, "name": "Portugal", "code": "POR", "group": "K", "flag": "🇵🇹" },
+  { "id": 42, "name": "DR Congo", "code": "COD", "group": "K", "flag": "🇨🇩" },
+  { "id": 43, "name": "Uzbekistan", "code": "UZB", "group": "K", "flag": "🇺🇿" },
+  { "id": 44, "name": "Colombia", "code": "COL", "group": "K", "flag": "🇨🇴" },
+
+  { "id": 45, "name": "England", "code": "ENG", "group": "L", "flag": "🏴" },
+  { "id": 46, "name": "Croatia", "code": "CRO", "group": "L", "flag": "🇭🇷" },
+  { "id": 47, "name": "Ghana", "code": "GHA", "group": "L", "flag": "🇬🇭" },
+  { "id": 48, "name": "Panama", "code": "PAN", "group": "L", "flag": "🇵🇦" }
+]

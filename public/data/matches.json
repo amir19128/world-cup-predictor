@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "homeTeam": "Argentina",
+    "awayTeam": "Canada",
+    "date": "2026-06-11",
+    "stadium": "Mexico City",
+    "status": "scheduled"
+  },
+  {
+    "id": 2,
+    "homeTeam": "Brazil",
+    "awayTeam": "Mexico",
+    "date": "2026-06-12",
+    "stadium": "Toronto",
+    "status": "scheduled"
+  },
+  {
+    "id": 3,
+    "homeTeam": "France",
+    "awayTeam": "Japan",
+    "date": "2026-06-12",
+    "stadium": "Los Angeles",
+    "status": "scheduled"
+  },
+  {
+    "id": 4,
+    "homeTeam": "Spain",
+    "awayTeam": "Germany",
+    "date": "2026-06-13",
+    "stadium": "Dallas",
+    "status": "scheduled"
+  }
+]

@@ -1,0 +1,48 @@
+@if (match()) {
+
+  <h1>Predict Match</h1>
+
+  <h2>
+    {{ match()?.homeTeam }}
+    vs
+    {{ match()?.awayTeam }}
+  </h2>
+
+  <form
+    [formGroup]="form"
+    (ngSubmit)="savePrediction()"
+  >
+
+    <div>
+      <label>
+        Home Score
+      </label>
+
+      <input
+        type="number"
+        formControlName="homeScore"
+      />
+    </div>
+
+    <br />
+
+    <div>
+      <label>
+        Away Score
+      </label>
+
+      <input
+        type="number"
+        formControlName="awayScore"
+      />
+    </div>
+
+    <br />
+
+    <button type="submit">
+      Save Prediction
+    </button>
+
+  </form>
+
+}

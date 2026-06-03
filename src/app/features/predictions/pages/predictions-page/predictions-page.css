@@ -1,0 +1,19 @@
+.prediction-container {
+  max-width: 500px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 16px;
+}
+
+input {
+  padding: 10px;
+}
+
+button {
+  padding: 12px;
+  cursor: pointer;
+}
