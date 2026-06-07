@@ -1,15 +1,37 @@
 import { HttpInterceptorFn } from '@angular/common/http';
-import { environment } from '../../../environments/environments';
 
 export const authInterceptor: HttpInterceptorFn = (
   req,
   next
 ) => {
-  const cloned = req.clone({
-    setHeaders: {
-      'X-Auth-Token': environment.apiKey,
-    },
-  });
+
+  if (
+    typeof window === 'undefined'
+  ) {
+
+    return next(req);
+
+  }
+
+  const token =
+    window.localStorage.getItem(
+      'token'
+    );
+
+  if (!token) {
+
+    return next(req);
+
+  }
+
+  const cloned =
+    req.clone({
+      setHeaders: {
+        Authorization:
+          `Bearer ${token}`,
+      },
+    });
 
   return next(cloned);
+
 };

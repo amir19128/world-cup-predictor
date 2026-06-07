@@ -10,5 +10,8 @@ export interface Match {
   date: string;
 
   stage: string;
+
+  group: string;
+
   status: string;
 }

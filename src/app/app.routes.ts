@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-
+import { authGuard } from './core/guards/auth-guard';
 export const routes: Routes = [
     {
         path: '',
@@ -22,15 +22,40 @@ export const routes: Routes = [
     },
     {
         path: 'predictions/:id',
+
+        canActivate: [
+            authGuard,
+        ],
+
         loadComponent: () =>
             import(
                 './features/predictions/pages/predictions-page/predictions-page'
-            ).then(m => m.PredictionsPage)
+            ).then(
+                m => m.PredictionsPage
+            )
     },
     {
         path: 'leaderboard',
         loadComponent: () =>
             import('./features/leaderboard/pages/leaderboard-page/leaderboard-page')
                 .then(m => m.LeaderboardPage)
-    }
+    },
+    {
+        path: 'login',
+        loadComponent: () =>
+            import(
+                './features/auth/pages/login-page/login-page'
+            ).then(
+                m => m.LoginPage
+            ),
+    },
+    {
+        path: 'register',
+        loadComponent: () =>
+            import(
+                './features/auth/pages/register-page/register-page'
+            ).then(
+                m => m.RegisterPage
+            ),
+    },
 ];

@@ -71,6 +71,7 @@ export class PredictionsPage {
   });
 
   savePrediction() {
+    alert('salam');
     if (this.form.invalid) {
       return;
     }

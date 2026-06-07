@@ -1,76 +1,28 @@
-<h1 class="page-title">
-  FIFA World Cup 2026
-</h1>
+@for (
+  group of groupNames();
+  track group
+) {
 
-<div class="matches-grid">
+  <section
+    class="group-section"
+  >
 
-  @for (match of matches(); track match.id) {
+    <h2 class="group-title">
+      {{ group }}
+    </h2>
 
-    <div class="match-card">
+    @for (
+      match of groupedMatches()[group];
+      track match.id
+    ) {
 
-      <div class="stage">
-        {{ match.stage }}
-      </div>
+      <app-match-card
+        [match]="match"
+        [predictions]="predictions()"
+      />
 
-      <div class="teams">
+    }
 
-        <div class="team">
+  </section>
 
-          <img
-            [src]="match.homeTeamCrest"
-            [alt]="match.homeTeam"
-          />
-
-          <span>
-            {{ match.homeTeam }}
-          </span>
-
-        </div>
-
-        <div class="vs">
-          VS
-        </div>
-
-        <div class="team">
-
-          <img
-            [src]="match.awayTeamCrest"
-            [alt]="match.awayTeam"
-          />
-
-          <span>
-            {{ match.awayTeam }}
-          </span>
-
-        </div>
-
-      </div>
-
-      <div class="match-info">
-
-        <div>
-          📅
-          {{ match.date | date:'medium' }}
-        </div>
-
-        <div>
-          {{ match.status }}
-        </div>
-
-      </div>
-
-      <button
-        class="predict-btn"
-        [routerLink]="[
-          '/predictions',
-          match.id
-        ]"
-      >
-        Predict Match
-      </button>
-
-    </div>
-
-  }
-
-</div>
+}

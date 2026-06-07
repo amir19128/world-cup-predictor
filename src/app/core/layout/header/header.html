@@ -1,10 +1,6 @@
-<header class="header">
+<header>
 
-  <div class="logo">
-    ⚽ World Cup Predictor
-  </div>
-
-  <nav>
+  <div class="left-links">
 
     <a
       routerLink="/teams"
@@ -21,12 +17,48 @@
     </a>
 
     <a
-      routerLink="/predictions"
+      routerLink="/leaderboard"
       routerLinkActive="active"
     >
-      Predictions
+      Leaderboard
     </a>
 
-  </nav>
+  </div>
+
+  <div class="right-links">
+
+    @if (
+      !authService.isAuthenticated()
+    ) {
+
+      <a
+        routerLink="/login"
+        routerLinkActive="active"
+      >
+        Login
+      </a>
+
+      <a
+        routerLink="/register"
+        routerLinkActive="active"
+      >
+        Register
+      </a>
+
+    }
+
+    @if (
+      authService.isAuthenticated()
+    ) {
+
+      <button
+        (click)="authService.logout()"
+      >
+        Logout
+      </button>
+
+    }
+
+  </div>
 
 </header>

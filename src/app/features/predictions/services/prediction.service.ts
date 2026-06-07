@@ -1,4 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+
+import { HttpClient } from '@angular/common/http';
+
+import { Observable } from 'rxjs';
+
+import { environment } from '../../../../environments/environments';
 
 import { Prediction } from '../models/prediction.model';
 
@@ -7,28 +13,29 @@ import { Prediction } from '../models/prediction.model';
 })
 export class PredictionService {
 
-  save(prediction: Prediction) {
+  private http =
+    inject(HttpClient);
 
-    const predictions =
-      this.getPredictions();
+  save(
+    prediction: Prediction
+  ): Observable<any> {
 
-    predictions.push(prediction);
-
-    localStorage.setItem(
-      'predictions',
-      JSON.stringify(predictions)
+    return this.http.post(
+      `${environment.apiUrl}/predictions`,
+      prediction
     );
+
   }
 
-  getPredictions(): Prediction[] {
+  getMyPredictions():
+    Observable<Prediction[]> {
 
-    const data =
-      localStorage.getItem(
-        'predictions'
-      );
+    return this.http.get<
+      Prediction[]
+    >(
+      `${environment.apiUrl}/predictions/me`
+    );
 
-    return data
-      ? JSON.parse(data)
-      : [];
   }
+
 }

@@ -3,37 +3,44 @@ import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 
 import { Match } from '../models/match.model';
+import { environment } from '../../../../environments/environments';
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class MatchService {
-    private http = inject(HttpClient);
-    getMatches(): Observable<Match[]> {
-        return this.http
-            .get<any>(
-                'https://api.football-data.org/v4/competitions/WC/matches'
-            )
-            .pipe(
-                map((response): Match[] =>
-                    response.matches.map((match: any): Match => ({
-                        id: match.id,
+  private http = inject(HttpClient);
 
-                        homeTeam: match.homeTeam.name,
-                        awayTeam: match.awayTeam.name,
+  getMatches(): Observable<Match[]> {
+    return this.http
+      .get<any>(
+        `${environment.apiUrl}/matches`
+      )
+      .pipe(
+        map((response): Match[] =>
+          response.matches.map(
+            (match: any): Match => ({
+              id: match.id,
 
-                        homeTeamCrest:
-                            match.homeTeam.crest,
+              homeTeam: match.homeTeam.name,
+              awayTeam: match.awayTeam.name,
 
-                        awayTeamCrest:
-                            match.awayTeam.crest,
+              group: match.group,
 
-                        date: match.utcDate,
+              homeTeamCrest:
+                match.homeTeam.crest,
 
-                        stage: match.stage,
-                        status: match.status,
-                    }))
-                )
-            );
-    }
+              awayTeamCrest:
+                match.awayTeam.crest,
+
+              date: match.utcDate,
+
+              stage: match.stage,
+
+              status: match.status,
+            })
+          )
+        )
+      );
+  }
 }
