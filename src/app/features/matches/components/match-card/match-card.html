@@ -1,0 +1,100 @@
+<div class="match-card">
+
+  <div class="match-row">
+
+    <div class="team-side">
+
+      <img
+        [src]="match().homeTeamCrest"
+        [alt]="match().homeTeam"
+      />
+
+      <span>
+        {{ match().homeTeam }}
+      </span>
+
+    </div>
+
+    <div class="prediction-area">
+
+      @if (authService.isAuthenticated()) {
+
+        @if (predictionClosed()) {
+
+          <div class="closed">
+            Closed
+          </div>
+
+        } @else {
+
+          <form
+            [formGroup]="form"
+            (ngSubmit)="savePrediction()"
+            class="prediction-form"
+          >
+
+            <input
+              type="number"
+              min="0"
+              formControlName="homeScore"
+            />
+
+            <span>-</span>
+
+            <input
+              type="number"
+              min="0"
+              formControlName="awayScore"
+            />
+
+            <button
+              type="submit"
+            >
+              Save
+            </button>
+
+          </form>
+
+        }
+
+      } @else {
+
+        <a
+          routerLink="/login"
+          class="login-btn"
+        >
+          Login
+        </a>
+
+      }
+
+    </div>
+
+    <div class="team-side team-right">
+
+      <img
+        [src]="match().awayTeamCrest"
+        [alt]="match().awayTeam"
+      />
+
+      <span>
+        {{ match().awayTeam }}
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="match-info">
+
+    <span>
+      {{ match().date | date:'MMM d, HH:mm' }}
+    </span>
+
+    <span>
+      {{ match().status }}
+    </span>
+
+  </div>
+
+</div>
